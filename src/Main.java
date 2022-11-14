@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -11,10 +12,42 @@ public class Main {
 		//longSample();
 		//doubleSample();
 		//booleanSample();
-		arraySample();
+		//arraySample();
+		arrayListSample();
 		
 		
 
+	}
+
+	private static void arrayListSample() {
+		// TODO Auto-generated method stub
+		// int -- Integer, double -- Double, long -- Long, boolean -- Boolean
+		ArrayList<Integer> iAl = new ArrayList<>();
+		System.out.println(iAl);
+		System.out.println(iAl.size());
+		iAl.add(1);
+		iAl.add(2);
+		System.out.println(iAl);
+		System.out.println(iAl.size());
+		iAl.add(3);
+		iAl.add(4);
+		System.out.println(iAl);
+		System.out.println(iAl.size());
+		
+		System.out.println(iAl.get(1));
+		iAl.set(1, 200);
+		System.out.println(iAl);
+		
+		iAl.remove(1);
+		System.out.println(iAl);
+		
+		iAl.add(1, 2);
+		System.out.println(iAl);
+		
+		System.out.println(iAl.contains(3));
+		System.out.println(iAl.contains(100));
+		
+		System.out.println(iAl.indexOf(3));
 	}
 
 	private static void arraySample() {
