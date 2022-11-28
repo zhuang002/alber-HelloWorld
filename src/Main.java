@@ -1,4 +1,7 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Main {
@@ -12,11 +15,29 @@ public class Main {
 		//longSample();
 		//doubleSample();
 		//booleanSample();
-		//arraySample();
-		arrayListSample();
+		arraySample();
+		//arrayListSample();
+		//hashmapSample();
 		
 		
 
+	}
+
+	private static void hashmapSample() {
+		// TODO Auto-generated method stub
+		HashMap<String, String> dictionary = new HashMap<>();
+		dictionary.put("Baby", "Child under 3 years old.");
+		dictionary.put("Father", "Male parent");
+		dictionary.put("Mother", "Female parent");
+		dictionary.put("Brother", "Male of the same parents");
+		dictionary.put("Sister", "Female of the same parents");
+		
+		System.out.println(dictionary);
+		
+		String key="Father";
+		System.out.println("The meaning of "+key +" is '" + dictionary.get(key)+"'");
+		key = "Sister";
+		System.out.println("The meaning of "+key +" is '" + dictionary.get(key)+"'");
 	}
 
 	private static void arrayListSample() {
@@ -48,6 +69,8 @@ public class Main {
 		System.out.println(iAl.contains(100));
 		
 		System.out.println(iAl.indexOf(3));
+		
+		Collections.sort(iAl);
 	}
 
 	private static void arraySample() {
@@ -66,8 +89,13 @@ public class Main {
 		sAr[2] = "efg";
 		System.out.println(sAr[0]+","+sAr[1]+","+sAr[2]);
 		
-		int[] iAr2 = {1,3,5,6,7};
+		int[] iAr2 = {7,5,3,6,1};
 		String[] sAr2 = {"abc","def"};
+		Arrays.sort(iAr2);
+		for (Integer i:iAr2) {
+			System.out.print(i+" ");
+		}
+		System.out.println();
 		
 		System.out.println(iAr.length +"," + sAr.length +","+iAr2.length +","+sAr2.length);
 		
