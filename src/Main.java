@@ -15,13 +15,66 @@ public class Main {
 		//longSample();
 		//doubleSample();
 		//booleanSample();
-		arraySample();
+		//arraySample();
 		//arrayListSample();
 		//hashmapSample();
+		stringSample();
 		
 		
 
 	}
+
+	private static void stringSample() {
+		// TODO Auto-generated method stub
+		String s1 = "abcd";
+		String s2 = "efgh";
+		String s3 = s1 + s2;
+		System.out.println(s3);
+		
+		s1 = "abc def geh";
+		String[] sa = s1.split(" ");
+		for (String s:sa) {
+			System.out.print(s+",");
+		}
+		System.out.println();
+		
+		s1 = "abcABCdefABCgeh";
+		sa = s1.split("A");
+		for (String s:sa) {
+			System.out.print(s+",");
+		}
+		System.out.println();
+		
+		s1 = "I am a student.";
+		s2 = s1.substring(2, 8);
+		System.out.println(s2);
+		s2 = s1.substring(4);
+		System.out.println(s2);
+
+		s1 = "adfsafsdafdsafdsafdsajf;sdafjs;adfjsda;fdsajf;sdafjdsa;lfj;dsaf";
+		int index = s1.indexOf("fs");
+		System.out.println(index);
+		index = s1.lastIndexOf("fds");
+		System.out.println(index);
+		index = s1.indexOf("abc");
+		System.out.println(index);
+		
+		index = s1.indexOf("fds");
+		while (index>=0) {
+			System.out.print(index+",");
+			index = s1.indexOf("fds", index+3);
+		}
+		System.out.println();
+		
+		s1 = "abc";
+		s2 = "abc";
+		System.out.println(s1 == s2);
+		System.out.println(s1.equals(s2));
+		System.out.println(s1.equals("abc"));
+		System.out.println(s1.equals("bcd"));
+		
+	}
+	
 
 	private static void hashmapSample() {
 		// TODO Auto-generated method stub
@@ -217,6 +270,33 @@ public class Main {
 		String name=sc.nextLine();
 		
 		System.out.println("Hello World, "+name+"!");
+		
+		// 1 +... +100;
+		int i=1;
+		int sum =0;
+		while(i<=100) {
+			sum += i;
+			i++;
+		}
+		
+		i=1;
+		sum =0;
+		do {
+			sum += i;
+			i++;
+		} while(i<=100);
+		
+		sum =0;
+		for (i=0;i<=100;i++) {
+			sum += i;
+		}
+		
+		i=1;
+		sum = 0;
+		for (;i<=100;) {
+			sum += i;
+			i++;
+		}
 	}
 
 }
