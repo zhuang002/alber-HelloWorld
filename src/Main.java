@@ -18,10 +18,42 @@ public class Main {
 		//arraySample();
 		//arrayListSample();
 		//hashmapSample();
-		stringSample();
-		
+		//stringSample();
+		accumulateSample();
+		maxMinSample();
 		
 
+	}
+
+	private static void maxMinSample() {
+		// TODO Auto-generated method stub
+		int[]  ar = {3, 5, 7, 9, 12,  6, 4, 22, 78, 55, 43, 99, 23};
+		int max = Integer.MIN_VALUE;
+		
+		for (int n:ar) {
+			if (max < n) {
+				max = n;
+			}
+		}
+		System.out.println(max);
+		
+		int min = Integer.MAX_VALUE;
+		for (int n:ar) {
+			if (min > n) {
+				min = n;
+			}
+		}
+		System.out.println(min);
+		
+	}
+
+	private static void accumulateSample() {
+		// TODO Auto-generated method stub
+		int sum = 0;
+		for (int i=1;i<=100;i++) {
+			sum += i;
+		}
+		System.out.println(sum);
 	}
 
 	private static void stringSample() {
