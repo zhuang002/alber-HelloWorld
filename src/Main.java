@@ -105,6 +105,10 @@ public class Main {
 		System.out.println(s1.equals("abc"));
 		System.out.println(s1.equals("bcd"));
 		
+		s1 = "123";
+		int d = Integer.parseInt(s1);
+		
+		
 	}
 	
 
