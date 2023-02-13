@@ -3,6 +3,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Main {
 	static Scanner sc = new Scanner(System.in);
@@ -19,10 +20,39 @@ public class Main {
 		//arrayListSample();
 		//hashmapSample();
 		//stringSample();
-		accumulateSample();
-		maxMinSample();
+		//accumulateSample();
+		//maxMinSample();
+		
+		asciiSample();
 		
 
+	}
+
+	private static void asciiSample() {
+		// TODO Auto-generated method stub
+		System.out.println((int)'2');
+		System.out.println((int)'4');
+		int i = '5'-'0';
+		int j='7'-'0';
+		System.out.println(i);
+		System.out.println(i+j);
+		String a = "12345";
+		int sum = 0;
+		for (int k=0;k<a.length();k++) {
+			char c = a.charAt(k);
+			sum += c-'0';
+		}
+		System.out.println(sum);
+		
+		int iA = Integer.parseInt(a);
+		System.out.println(iA);
+		sum = 0;
+		while (iA!=0) {
+			int lastDigit = iA % 10;
+			sum += lastDigit;
+			iA = iA/10;
+		}
+		System.out.println(sum);
 	}
 
 	private static void maxMinSample() {
@@ -83,7 +113,7 @@ public class Main {
 		s2 = s1.substring(4);
 		System.out.println(s2);
 
-		s1 = "adfsafsdafdsafdsafdsajf;sdafjs;adfjsda;fdsajf;sdafjdsa;lfj;dsaf";
+		s1 = "adfsafsdafdsafdsafdsajf;sdafjs;adfjsdxxa;fdsajf;sdafjdsa;lfj;dsaf";
 		int index = s1.indexOf("fs");
 		System.out.println(index);
 		index = s1.lastIndexOf("fds");
@@ -187,6 +217,29 @@ public class Main {
 		System.out.println();
 		
 		System.out.println(iAr.length +"," + sAr.length +","+iAr2.length +","+sAr2.length);
+		
+		int x=3;
+		boolean found = false;
+		for (int i:iAr2) {
+			if (i==x) {
+				found = true;
+				break;
+			}
+		}
+		if (found) {
+			System.out.println("found:"+x);
+		} else {
+			System.out.println("not found:" +x);
+		}
+		
+		String ele = "Cl";
+		Set<String> nonMetalElements = Set.of(sAr2);
+		Set<String> nonMetalElements2 = Set.of("Cl", "H", "O", "P");
+		if (nonMetalElements.contains(ele)) {
+			System.out.println(ele+" is non-metal");
+		} else {
+			System.out.println(ele+" is metal");
+		}
 		
 		/*
 		 * for loop statement
